@@ -54,6 +54,7 @@
 .content {
   padding: 6rem 0;
   background: var(--color-bg-dark);
+  overflow: hidden; /* Prevent animation overflow */
 }
 
 .grid {
@@ -275,5 +276,16 @@
 
   .contactItem {
     padding: 1.25rem;
+  }
+
+  /* Disable hover transforms on mobile to prevent overflow */
+  .contactItem:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(212, 175, 55, 0.1);
+  }
+
+  .socialLink:hover {
+    transform: none;
   }
 }
