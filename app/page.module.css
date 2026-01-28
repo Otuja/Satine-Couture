@@ -1,0 +1,302 @@
+/* Home/* Featured Collections */
+.featured {
+  padding: 6rem 0;
+  background: var(--color-bg-light);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+.viewAll {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* Brand Story Section */
+.story {
+  padding: 6rem 0;
+  background: #ffffff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.storyContent {
+  padding: 2rem 0;
+}
+
+.storyTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.storyText {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.storyImage {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.storyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.storyImage:hover img {
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+  padding: 6rem 0;
+  background: var(--color-bg-medium);
+}
+
+.servicesTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -0.02em;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  padding: 3.5rem 2.5rem;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 30px var(--color-shadow);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.serviceCard:hover::before {
+  transform: scaleX(1);
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 50px rgba(139, 115, 85, 0.2);
+}
+
+.serviceIcon {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  transition: all 0.4s ease;
+}
+
+.serviceIcon svg {
+  width: 56px;
+  height: 56px;
+}
+
+.serviceCard:hover .serviceIcon {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--color-primary-dark);
+}
+
+.serviceTitle {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.serviceDescription {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* Instagram Text Section */
+.instagram {
+  padding: 5rem 0;
+  background: #ffffff;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.instagramContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.instagramTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.instagramText {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.instagramHandle {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.instagramHandle::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.instagramHandle:hover::after {
+  transform: scaleX(1);
+}
+
+.instagramHandle:hover {
+  color: var(--color-primary-light);
+}
+
+/* CTA Section */
+.cta {
+  padding: 6rem 0;
+  background: var(--color-bg-light);
+  text-align: center;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured,
+  .story,
+  .services,
+  .cta {
+    padding: 4rem 0;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .storyImage {
+    order: -1;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 3rem;
+  }
+
+  .viewAll {
+    margin-top: 3rem;
+  }
+}
