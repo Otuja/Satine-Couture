@@ -108,7 +108,9 @@
 
 @media (max-width: 768px) {
   .form {
-    padding: 1.5rem;
+    padding: 1rem;
+    border: none;
+    background: transparent;
   }
 
   .input,
