@@ -1,19 +1,29 @@
-# Satine Couture - Luxury Fashion Website
+# Satine Couture - Luxury Fashion House Website
 
-A stunning, modern website for Satine Couture, a luxury women's wear brand specializing in bridal, bespoke, and ready-to-wear fashion.
+A sophisticated, elegant website for Satine Couture, a luxury women's wear brand specializing in bridal, bespoke, and ready-to-wear fashion. This project features a custom "Light Boutique" theme designed to reflect the high-end nature of the brand.
 
 ![Satine Couture](public/images/hero-bg.jpg)
 
-## ✨ Features
+## ✨ Key Features
 
-- 🎨 **Premium Dark Theme** with gold accents
-- 📱 **Fully Responsive** design for all devices
-- ⚡ **Fast Performance** with Next.js 14
-- 🎬 **Smooth Animations** and transitions
-- 🖼️ **Image Galleries** with hover effects
-- 📝 **Contact Form** for appointment booking
-- 🔍 **SEO Optimized** with meta tags
-- 🎯 **Category Filtering** for collections
+### 🎨 Design & Aesthetics
+- **Light Boutique Theme**: A refined palette of Warm Taupe (`#8b7355`), Soft Cream (`#f5f2ef`), and Off-White (`#faf8f6`).
+- **Typography**: Elegant pairing of `Cormorant Garamond` (Serif) for headings and `Montserrat` (Sans-serif) for body text.
+- **Custom Logo Animation**: Unique "Satine . Couture" split animation with staggered entrance effects.
+- **Glassmorphism**: Subtle glass effects on navigation and overlays.
+
+### 📱 Mobile Experience
+- **Redesigned Mobile Menu**: Slide-from-right navigation with stylish numbered links (01, 02, 03, 04).
+- **Touch-Friendly Carousels**: Swipeable image sliders and testimonials.
+- **Mobile-Optimized Cards**: Collection cards automatically show details without needing hover interactions.
+- **Smart Navigation**: Bottom-placed social icons for easy thumb access.
+
+### ⚡ Technical Highlights
+- **Next.js 14 (App Router)**: Utilizing the latest React Server Components for optimal performance.
+- **Local Asset Optimization**: All images and assets are served locally for reliability and speed.
+- **Custom SVG Icon System**: Replaced standard emojis with a bespoke set of theme-colored SVG icons.
+- **Auto-Play Carousels**: Intelligent sliders that pause on hover for better readability.
+- **SEO Optimized**: Semantic HTML structure and meta tags for better search visibility.
 
 ## 🚀 Quick Start
 
@@ -23,172 +33,100 @@ A stunning, modern website for Satine Couture, a luxury women's wear brand speci
 
 ### Installation
 
-```bash
-# Install dependencies
-npm install
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Otuja/Satine-Couture.git
+   cd Satine-Couture
+   ```
 
-# Run development server
-npm run dev
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Open browser to
-http://localhost:3000
-```
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
 
-### Build for Production
-
-```bash
-# Create production build
-npm run build
-
-# Start production server
-npm start
-```
+4. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
 
 ```
 fashion/
 ├── app/                    # Next.js App Router pages
-│   ├── page.tsx           # Home page
-│   ├── collections/       # Collections page
-│   ├── about/            # About page
-│   └── contact/          # Contact page
-├── components/            # Reusable components
-│   ├── Header.tsx        # Navigation
-│   ├── Footer.tsx        # Footer
-│   ├── Hero.tsx          # Hero section
-│   ├── CollectionGrid.tsx # Collection grid
-│   └── ContactForm.tsx   # Contact form
+│   ├── page.tsx           # Home page (Hero, Featured, Story)
+│   ├── collections/       # Collections page (Grid, Filter)
+│   ├── about/            # About page (Mission, Values)
+│   ├── contact/          # Contact page (Form, Info)
+│   ├── layout.tsx        # Root layout & Font configuration
+│   └── globals.css       # Global styles & CSS variables
+├── components/            # Reusable UI components
+│   ├── Header.tsx        # Navigation & Mobile Menu
+│   ├── Footer.tsx        # Site Footer
+│   ├── Hero.tsx          # Reusable Hero Section
+│   ├── CollectionGrid.tsx # Interactive Image Grid
+│   ├── ImageSlider.tsx   # Auto-play Carousel
+│   ├── Testimonials.tsx  # Client Reviews Carousel
+│   └── ContactForm.tsx   # Appointment Booking Form
 ├── public/
-│   └── images/           # Image assets
-└── styles/               # Global styles
+│   └── images/           # Local image assets
+└── styles/               # Component-specific CSS modules
 ```
 
-## 🎨 Pages
+## 🛠️ Customization Guide
 
-### Home (`/`)
-- Hero section with full-screen background
-- Featured collections grid
-- Brand story
-- Services overview
-- Call-to-action section
-
-### Collections (`/collections`)
-- Filterable collection grid
-- Category filters (Bridal, Traditional, Bespoke, RTW)
-- Hover effects on collection cards
-
-### About (`/about`)
-- Brand story and mission
-- Services overview
-- Company values
-
-### Contact (`/contact`)
-- Contact information
-- Appointment booking form
-- Social media links
-
-## 🛠️ Customization
-
-### Replace Placeholder Images
-
-Navigate to `/public/images/` and replace:
-- `hero-bg.jpg` - Hero background
-- `bridal-1.jpg` - Bridal collection
-- `traditional-1.jpg`, `traditional-2.jpg` - Traditional wear
-- `bespoke-1.jpg`, `bespoke-2.jpg` - Bespoke designs
-- `rtw-1.jpg`, `rtw-2.jpg` - Ready-to-wear
-
-### Update Brand Colors
-
-Edit `app/globals.css`:
+### Colors
+The theme is controlled via CSS variables in `app/globals.css`.
 
 ```css
 :root {
-  --color-primary: #d4af37;        /* Gold */
-  --color-primary-light: #f4e4c1;  /* Champagne */
-  --color-bg-dark: #0a0a0a;        /* Deep Black */
-  /* ... */
+  /* Elegant Light Boutique Theme */
+  --color-primary: #8b7355;        /* Warm taupe */
+  --color-primary-light: #a89080;  /* Light taupe */
+  --color-primary-dark: #6b5744;   /* Deep taupe */
+  
+  --color-bg-light: #faf8f6;       /* Warm off-white */
+  --color-bg-medium: #f5f2ef;      /* Soft cream */
+  --color-bg-dark: #ebe7e3;        /* Light beige */
+  
+  --color-text-primary: #2c2420;   /* Deep brown */
 }
 ```
 
-### Update Contact Information
+### Images
+Replace images in `public/images/` to update content:
+- `hero-bg.jpg`: Main homepage hero.
+- `collection-*.jpg`: Collection grid images.
+- `testimonial-*.jpg`: Client photos.
 
-Edit:
-- `components/Footer.tsx` - Footer contact info
-- `app/contact/page.tsx` - Contact page details
-
-## 📦 Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: CSS Modules
-- **Fonts**: Google Fonts (Playfair Display, Inter)
-- **Deployment**: Vercel-ready
+### Content
+- **Contact Info**: Update in `app/contact/page.tsx` and `components/Footer.tsx`.
+- **Testimonials**: Update the `testimonials` array in `components/Testimonials.tsx`.
+- **Services**: Update the services list in `app/page.tsx`.
 
 ## 🌐 Deployment
 
-### Deploy to Vercel
+### Vercel (Recommended)
+1. Push your code to GitHub.
+2. Import the project into Vercel.
+3. Vercel will automatically detect Next.js and deploy.
 
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-Or connect your GitHub repository to Vercel for automatic deployments.
-
-### Deploy to Netlify
-
-```bash
-# Build the project
-npm run build
-
-# Deploy the .next folder
-```
-
-## 📝 Environment Variables
-
-No environment variables required for basic functionality.
-
-For contact form integration with email services, add:
-
-```env
-NEXT_PUBLIC_EMAIL_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAIL_TEMPLATE_ID=your_template_id
-```
-
-## 🎯 SEO
-
-The website includes:
-- Meta tags for all pages
-- Open Graph tags for social sharing
-- Twitter Card tags
-- Semantic HTML structure
-- Optimized images with alt text
-
-## 📱 Responsive Breakpoints
-
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
-
-## 🤝 Contributing
-
-This is a custom website for Satine Couture. For modifications or enhancements, please contact the development team.
+### Netlify
+1. Push to GitHub.
+2. New Site from Git > Select Repository.
+3. Build command: `npm run build`.
+4. Publish directory: `.next`.
 
 ## 📄 License
-
 © 2026 Satine Couture. All rights reserved.
 
 ## 📞 Contact
-
 - **Email**: info.satinecouture@gmail.com
 - **Instagram**: [@satine_couture](https://instagram.com/satine_couture)
 - **WhatsApp**: [Message us](https://wa.me/message/M3VJPERGFUAPN1)
 
 ---
-
-**Built with ❤️ for Satine Couture** - *Luxe Women's Wear Brand*
+**Built with ❤️ for Satine Couture**
